@@ -60,9 +60,9 @@ class Geminabox < Sinatra::Base
     Marshal.dump(deps)
   end
 
-  get '/upload' do
-    erb :upload
-  end
+#  get '/upload' do
+#    erb :upload
+#  end
 
   get '/reindex' do
     reindex(:force_rebuild)
