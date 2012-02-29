@@ -82,13 +82,13 @@ class Geminabox < Sinatra::Base
     redirect url("/")
   end
 
-  post '/upload' do
-    unless params[:file] && params[:file][:filename] && (tmpfile = params[:file][:tempfile])
-      @error = "No file selected"
-      halt [400, erb(:upload)]
-    end
-    handle_incoming_gem(IncomingGem.new(tmpfile))
-  end
+#  post '/upload' do
+#    unless params[:file] && params[:file][:filename] && (tmpfile = params[:file][:tempfile])
+#      @error = "No file selected"
+#      halt [400, erb(:upload)]
+#    end
+#    handle_incoming_gem(IncomingGem.new(tmpfile))
+#  end
 
   post '/api/v1/gems' do
     begin
