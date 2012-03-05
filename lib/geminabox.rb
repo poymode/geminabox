@@ -64,10 +64,10 @@ class Geminabox < Sinatra::Base
 #    erb :upload
 #  end
 
-  get '/reindex' do
-    reindex(:force_rebuild)
-    redirect url("/")
-  end
+#  get '/reindex' do
+#    reindex(:force_rebuild)
+#    redirect url("/")
+#  end
 
   get '/gems/:gemname' do
     gems = Hash[load_gems.by_name]
@@ -76,11 +76,11 @@ class Geminabox < Sinatra::Base
     erb :gem
   end
 
-  delete '/gems/*.gem' do
-    File.delete file_path if File.exists? file_path
-    reindex(:force_rebuild)
-    redirect url("/")
-  end
+#  delete '/gems/*.gem' do
+#    File.delete file_path if File.exists? file_path
+#    reindex(:force_rebuild)
+#    redirect url("/")
+#  end
 
 #  post '/upload' do
 #    unless params[:file] && params[:file][:filename] && (tmpfile = params[:file][:tempfile])

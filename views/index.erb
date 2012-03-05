@@ -22,10 +22,8 @@
               <small class="platform"><%= version.platform %></small>
             <% end %>
           </p>
-          <form class="delete-form" method="post" action="<%= url("/gems/#{version.gemfile_name}.gem") %>">
+          <form class="download-form" method="post" action="<%= url("/gems/#{version.gemfile_name}.gem") %>">
             <a class="download" href="<%= url("/gems/#{version.gemfile_name}.gem") %>">download</a>
-            <input type="hidden" name="_method" value="DELETE" />
-            <button type="submit">delete</button>
           </form>
         <% end %>
 
